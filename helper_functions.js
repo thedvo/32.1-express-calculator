@@ -30,10 +30,10 @@ function calculateMedian(numbers) {
 		// if the length of the numbers array is even, then we will need 2 middle values to calculate the true median
 		midIndex = nums / 2 - 1; // since going by index 0, minus 1 to get the correct position
 
-		let midIndex2 = math.floor((nums + 1) / 2);
+		let midIndex2 = Math.floor((nums + 1) / 2);
 		return (numbers[midIndex] + numbers[midIndex2]) / 2;
 	} else {
-		midIndex = math.floor(nums / 2);
+		midIndex = Math.floor(nums / 2);
 		return numbers[midIndex];
 	}
 }
@@ -51,7 +51,7 @@ function calculateMode(numbers) {
 			maxKey = num;
 		}
 	}
-	return maxKey;
+	return Number(maxKey);
 }
 
 function frequencyCounter(numbers) {
