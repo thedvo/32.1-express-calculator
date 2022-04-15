@@ -4,6 +4,9 @@ function verifyAndConvert(queryResults) {
 	for (let i = 0; i < queryResults.length; i++) {
 		let convertedNum = Number(queryResults[i]);
 
+		if (Number.isNaN(convertedNum)) {
+			return new Error(`The value '${queryResults[i]}'is not a valid number.`);
+		}
 		nums.push(convertedNum);
 	}
 	return nums;
